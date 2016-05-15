@@ -109,6 +109,13 @@
               <goal>prepare-agent</goal>
             </goals>
           </execution>
+          <execution>
+            <id>report</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>report</goal>
+            </goals>
+          </execution>
         </executions>
 	  </plugin>
       <!-- +++ Plugin that generate javadocs for the specified project: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -122,5 +129,12 @@
       </plugin>
     </plugins>
   </build>
-  
+  <dependencies>
+    <dependency>
+  	  <groupId>junit</groupId>
+  	  <artifactId>junit</artifactId>
+  	  <version>4.12</version>
+  	  <scope>test</scope>
+    </dependency>
+  </dependencies>
 </project>
