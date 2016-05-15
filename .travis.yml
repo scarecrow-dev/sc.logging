@@ -1,13 +1,14 @@
-
-# set the programming language to java:
+# Set the programming language to java:
 language: java
 
-# test for these JDK versions and environments
+# Set JDK versions to Oracle Java 8:
 jdk:
    - oraclejdk8
 
+# Build step:
 script: 
    - mvn clean verify
-   
-#after_success:
-#   - mvn clean test jacoco:report coveralls:report
+
+# After a successful build generate a coverage report and commit it to coveralls:   
+after_success:
+   - mvn clean test jacoco:report coveralls:report
