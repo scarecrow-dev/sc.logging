@@ -1,3 +1,6 @@
+# Root rights are required during the build process:
+sudo: required
+
 # Set the programming language to java:
 language: java
 
